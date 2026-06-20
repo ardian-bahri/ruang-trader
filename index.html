@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang Trader — Belajar Crypto & Forex Trading</title>
+    <meta name="description" content="Ruang Trader adalah komunitas belajar crypto dan forex trading terbesar di Indonesia. Dapatkan signal, mentoring, dan edukasi trading terbaik.">
+    <meta property="og:title" content="Ruang Trader — Belajar Crypto & Forex Trading">
+    <meta property="og:description" content="Komunitas belajar crypto dan forex trading terbesar di Indonesia. Signal, mentoring, dan edukasi trading.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-inner">
+            <a href="#" class="logo" id="logo">
+                <svg class="logo-icon" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Candlestick 1 (small, bearish) -->
+                    <line x1="8" y1="8" x2="8" y2="32" stroke="#00D084" stroke-width="1.5"/>
+                    <rect x="5" y="14" width="6" height="10" rx="1" fill="#00D084"/>
+                    <!-- Candlestick 2 (tall, bullish) -->
+                    <line x1="18" y1="2" x2="18" y2="36" stroke="#00D084" stroke-width="1.5"/>
+                    <rect x="14" y="6" width="8" height="20" rx="1" fill="#00D084"/>
+                    <!-- Candlestick 3 (medium, bearish) -->
+                    <line x1="28" y1="10" x2="28" y2="38" stroke="#38BDF8" stroke-width="1.5"/>
+                    <rect x="25" y="16" width="6" height="14" rx="1" fill="#38BDF8"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-ruang">RUANG</span>
+                    <span class="logo-trader">TRADER</span>
+                </div>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Benefit</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+                <li><a href="#pricing">Harga</a></li>
+            </ul>
+            <div class="nav-auth-buttons" id="nav-auth-buttons">
+                <a href="login.html" class="btn btn-outline nav-btn-login" id="nav-login-btn">Login</a>
+                <a href="register.html" class="btn btn-primary nav-btn-signup" id="nav-signup-btn">Sign Up</a>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Benefit</a></li>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#testimonials">Testimoni</a></li>
+            <li><a href="#pricing">Harga</a></li>
+            <li><a href="login.html" class="btn btn-outline">Login</a></li>
+            <li><a href="register.html" class="btn btn-primary">Sign Up</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-effects">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge" id="hero-badge">
+                <span class="badge-dot"></span>
+                Komunitas Trading #1 di Indonesia
+            </div>
+            <h1 class="hero-title" id="hero-title">
+                Belajar Trading<br>
+                <span class="gradient-text">Crypto & Forex</span><br>
+                Bersama Mentor Terbaik
+            </h1>
+            <p class="hero-subtitle" id="hero-subtitle">
+                Dapatkan signal harian, edukasi mendalam, dan mentoring langsung dari para trader berpengalaman. 
+                Mulai perjalanan trading kamu sekarang bersama Ruang Trader.
+            </p>
+            <div class="hero-buttons" id="hero-buttons">
+                <a href="#pricing" class="btn btn-primary btn-lg">
+                    <span>Mulai Belajar</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#features" class="btn btn-outline btn-lg">Lihat Benefit</a>
+            </div>
+            <div class="hero-stats" id="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100">0</span><span class="stat-suffix">+</span>
+                    <span class="stat-label">Member Aktif</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="85">0</span><span class="stat-suffix">%</span>
+                    <span class="stat-label">Win Rate Signal</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="24">0</span><span class="stat-suffix">/7</span>
+                    <span class="stat-label">Support Aktif</span>
+                </div>
+            </div>
+        </div>
+        <!-- Floating Crypto Icons -->
+        <div class="floating-icons">
+            <div class="float-icon float-btc">₿</div>
+            <div class="float-icon float-eth">Ξ</div>
+            <div class="float-icon float-chart">📈</div>
+            <div class="float-icon float-dollar">$</div>
+        </div>
+    </section>
+
+    <!-- Marquee Ticker -->
+    <div class="ticker-bar" id="ticker-bar">
+        <div class="ticker-track">
+            <div class="ticker-content">
+                <span class="ticker-item"><span class="ticker-symbol">BTC/USDT</span> <span class="ticker-green">▲ +2.45%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">ETH/USDT</span> <span class="ticker-green">▲ +1.82%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">SOL/USDT</span> <span class="ticker-red">▼ -0.95%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">XRP/USDT</span> <span class="ticker-green">▲ +3.21%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">BNB/USDT</span> <span class="ticker-green">▲ +0.67%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">ADA/USDT</span> <span class="ticker-red">▼ -1.12%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">DOGE/USDT</span> <span class="ticker-green">▲ +5.43%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">EUR/USD</span> <span class="ticker-green">▲ +0.32%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">GBP/USD</span> <span class="ticker-red">▼ -0.15%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">XAU/USD</span> <span class="ticker-green">▲ +1.05%</span></span>
+                <!-- duplicate for seamless scroll -->
+                <span class="ticker-item"><span class="ticker-symbol">BTC/USDT</span> <span class="ticker-green">▲ +2.45%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">ETH/USDT</span> <span class="ticker-green">▲ +1.82%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">SOL/USDT</span> <span class="ticker-red">▼ -0.95%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">XRP/USDT</span> <span class="ticker-green">▲ +3.21%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">BNB/USDT</span> <span class="ticker-green">▲ +0.67%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">ADA/USDT</span> <span class="ticker-red">▼ -1.12%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">DOGE/USDT</span> <span class="ticker-green">▲ +5.43%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">EUR/USD</span> <span class="ticker-green">▲ +0.32%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">GBP/USD</span> <span class="ticker-red">▼ -0.15%</span></span>
+                <span class="ticker-item"><span class="ticker-symbol">XAU/USD</span> <span class="ticker-green">▲ +1.05%</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header" id="features-header">
+                <span class="section-tag">Benefit Unggulan</span>
+                <h2 class="section-title">Semua yang Kamu Butuhkan <br><span class="gradient-text">Dalam Satu Platform</span></h2>
+                <p class="section-subtitle">Kami menyediakan tools dan edukasi lengkap untuk membantu kamu menjadi trader yang profitable</p>
+            </div>
+            <div class="features-grid" id="features-grid">
+                <div class="feature-card" id="feature-signal">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Trading Signal</h3>
+                    <p>Dapatkan signal trading harian dengan akurasi tinggi untuk crypto dan forex market</p>
+                </div>
+                <div class="feature-card" id="feature-education">
+                    <div class="feature-icon-wrap accent-blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3>E-Book & Edukasi</h3>
+                    <p>Materi edukasi lengkap dalam bentuk e-book dan video untuk semua level trader</p>
+                </div>
+                <div class="feature-card" id="feature-zoom">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14M5 18h8a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Live Zoom Class</h3>
+                    <p>Sesi zoom mingguan untuk diskusi market analysis dan belajar strategi baru</p>
+                </div>
+                <div class="feature-card" id="feature-mentoring">
+                    <div class="feature-icon-wrap accent-blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>1-on-1 Mentoring</h3>
+                    <p>Sesi mentoring pribadi langsung dengan mentor berpengalaman untuk hasil maksimal</p>
+                </div>
+                <div class="feature-card" id="feature-index">
+                    <div class="feature-icon-wrap">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3>Index Update</h3>
+                    <p>Update indeks market terkini untuk membantu kamu mengambil keputusan trading yang tepat</p>
+                </div>
+                <div class="feature-card" id="feature-forex">
+                    <div class="feature-icon-wrap accent-blue">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Forex Zone</h3>
+                    <p>Zona khusus pembahasan pasar forex dengan analisa teknikal dan fundamental</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-grid">
+            <div class="about-visual" id="about-visual">
+                <div class="about-card-stack">
+                    <div class="about-float-card card-profit">
+                        <div class="afc-icon green">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                                <polyline points="17 6 23 6 23 12"></polyline>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="afc-label">Profit Bulan Ini</span>
+                            <span class="afc-value green">+32.5%</span>
+                        </div>
+                    </div>
+                    <div class="about-float-card card-members">
+                        <div class="afc-icon blue">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="afc-label">Member Aktif</span>
+                            <span class="afc-value blue">100+</span>
+                        </div>
+                    </div>
+                    <div class="about-chart-box">
+                        <div class="chart-header">
+                            <span>Portfolio Growth</span>
+                            <span class="chart-badge">+85%</span>
+                        </div>
+                        <svg class="mini-chart" viewBox="0 0 300 100" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                                    <stop offset="0%" stop-color="#00D084" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#00D084" stop-opacity="0"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M0,80 Q30,75 60,65 T120,50 T180,35 T240,20 T300,10" fill="none" stroke="#00D084" stroke-width="2.5"/>
+                            <path d="M0,80 Q30,75 60,65 T120,50 T180,35 T240,20 T300,10 L300,100 L0,100 Z" fill="url(#chartGrad)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="about-text" id="about-text">
+                <span class="section-tag">Tentang Kami</span>
+                <h2 class="section-title">Mengapa Memilih <br><span class="gradient-text">Ruang Trader?</span></h2>
+                <p class="about-desc">Ruang Trader adalah komunitas belajar trading yang berfokus pada edukasi berkualitas dan hasil nyata. Kami percaya bahwa setiap orang bisa menjadi trader yang profitable dengan bimbingan yang tepat.</p>
+                <ul class="about-checklist">
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Mentor Berpengalaman</strong>
+                            <p>Belajar langsung dari trader profesional dengan pengalaman bertahun-tahun di market</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Komunitas Supportif</strong>
+                            <p>Gabung dengan ratusan member yang saling mendukung dan berbagi insight trading</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Akses Lifetime</strong>
+                            <p>Bayar sekali, akses selamanya. Termasuk semua update materi dan benefit baru</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Cara Bergabung</span>
+                <h2 class="section-title">Mulai Dalam <span class="gradient-text">3 Langkah Mudah</span></h2>
+            </div>
+            <div class="steps-grid" id="steps-grid">
+                <div class="step-card" id="step-1">
+                    <div class="step-number">01</div>
+                    <div class="step-line"></div>
+                    <h3>Pilih Paket</h3>
+                    <p>Pilih paket membership yang sesuai dengan kebutuhan dan budget kamu</p>
+                </div>
+                <div class="step-card" id="step-2">
+                    <div class="step-number">02</div>
+                    <div class="step-line"></div>
+                    <h3>Lakukan Pembayaran</h3>
+                    <p>Proses pembayaran cepat dan aman melalui berbagai metode pembayaran</p>
+                </div>
+                <div class="step-card" id="step-3">
+                    <div class="step-number">03</div>
+                    <h3>Mulai Belajar</h3>
+                    <p>Akses semua materi, signal, dan komunitas — mulai trading journey kamu!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Testimoni</span>
+                <h2 class="section-title">Bukti Profit <span class="gradient-text">Member Kami</span></h2>
+                <p class="section-subtitle">Hasil nyata dari member komunitas Ruang Trader — bukan janji, tapi bukti!</p>
+            </div>
+
+            <!-- Scrolling Row 1 (Left) -->
+            <div class="testi-marquee" id="testi-marquee-1">
+                <div class="testi-marquee-track testi-scroll-left">
+                    <div class="testi-screenshot" data-index="0"><img src="assets/images/Screenshot 2026-05-30 090651.png" alt="Bukti profit member 1" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="1"><img src="assets/images/Screenshot 2026-05-30 090719.png" alt="Bukti profit member 2" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="2"><img src="assets/images/Screenshot 2026-05-30 090742.png" alt="Bukti profit member 3" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="3"><img src="assets/images/Screenshot 2026-05-30 090811.png" alt="Bukti profit member 4" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="4"><img src="assets/images/Screenshot 2026-05-30 090849.png" alt="Bukti profit member 5" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="5"><img src="assets/images/Screenshot 2026-05-30 090908.png" alt="Bukti profit member 6" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="6"><img src="assets/images/Screenshot 2026-05-30 090930.png" alt="Bukti profit member 7" loading="lazy"></div>
+                    <!-- Duplicates for seamless loop -->
+                    <div class="testi-screenshot" data-index="0"><img src="assets/images/Screenshot 2026-05-30 090651.png" alt="Bukti profit member 1" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="1"><img src="assets/images/Screenshot 2026-05-30 090719.png" alt="Bukti profit member 2" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="2"><img src="assets/images/Screenshot 2026-05-30 090742.png" alt="Bukti profit member 3" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="3"><img src="assets/images/Screenshot 2026-05-30 090811.png" alt="Bukti profit member 4" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="4"><img src="assets/images/Screenshot 2026-05-30 090849.png" alt="Bukti profit member 5" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="5"><img src="assets/images/Screenshot 2026-05-30 090908.png" alt="Bukti profit member 6" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="6"><img src="assets/images/Screenshot 2026-05-30 090930.png" alt="Bukti profit member 7" loading="lazy"></div>
+                </div>
+            </div>
+
+            <!-- Scrolling Row 2 (Right) -->
+            <div class="testi-marquee" id="testi-marquee-2">
+                <div class="testi-marquee-track testi-scroll-right">
+                    <div class="testi-screenshot" data-index="7"><img src="assets/images/Screenshot 2026-05-30 090950.png" alt="Bukti profit member 8" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="8"><img src="assets/images/Screenshot 2026-05-30 091007.png" alt="Bukti profit member 9" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="9"><img src="assets/images/Screenshot 2026-05-30 091020.png" alt="Bukti profit member 10" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="10"><img src="assets/images/Screenshot 2026-05-30 091101.png" alt="Bukti profit member 11" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="11"><img src="assets/images/Screenshot 2026-05-30 091153.png" alt="Bukti profit member 12" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="12"><img src="assets/images/Screenshot 2026-05-30 091219.png" alt="Bukti profit member 13" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="13"><img src="assets/images/Screenshot 2026-05-30 091247.png" alt="Bukti profit member 14" loading="lazy"></div>
+                    <!-- Duplicates for seamless loop -->
+                    <div class="testi-screenshot" data-index="7"><img src="assets/images/Screenshot 2026-05-30 090950.png" alt="Bukti profit member 8" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="8"><img src="assets/images/Screenshot 2026-05-30 091007.png" alt="Bukti profit member 9" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="9"><img src="assets/images/Screenshot 2026-05-30 091020.png" alt="Bukti profit member 10" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="10"><img src="assets/images/Screenshot 2026-05-30 091101.png" alt="Bukti profit member 11" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="11"><img src="assets/images/Screenshot 2026-05-30 091153.png" alt="Bukti profit member 12" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="12"><img src="assets/images/Screenshot 2026-05-30 091219.png" alt="Bukti profit member 13" loading="lazy"></div>
+                    <div class="testi-screenshot" data-index="13"><img src="assets/images/Screenshot 2026-05-30 091247.png" alt="Bukti profit member 14" loading="lazy"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Previous">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+        </button>
+        <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Next">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Testimoni screenshot">
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter">1 / 14</div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Pricelist</span>
+                <h2 class="section-title">Pilih Paket <span class="gradient-text">Terbaik Untukmu</span></h2>
+                <p class="section-subtitle">Investasi terbaik adalah investasi pada pengetahuan. Pilih paket yang sesuai dengan kebutuhanmu.</p>
+            </div>
+            <div class="pricing-grid" id="pricing-grid">
+                <!-- Basic Plan -->
+                <div class="pricing-card" id="pricing-basic">
+                    <div class="pricing-header">
+                        <span class="plan-name">Basic</span>
+                        <div class="plan-price">
+                            <span class="currency">IDR</span>
+                            <span class="amount">300K</span>
+                        </div>
+                        <span class="plan-period">/ LIFETIME</span>
+                        <p class="plan-desc">Cocok untuk kamu yang baru mulai belajar trading</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="benefit-list">
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Weekly/Monthly Signal
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Index Update
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Forex Zone
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Free Request Outlook
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Education E-Book & Discuss
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Zoom 1x Seminggu
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="btn btn-outline btn-block" id="btn-basic">Pilih Paket Basic</a>
+                    </div>
+                </div>
+                <!-- Premium Plan -->
+                <div class="pricing-card pricing-featured" id="pricing-premium">
+                    <div class="pricing-popular-badge">🔥 Paling Populer</div>
+                    <div class="pricing-header">
+                        <span class="plan-name">Premium</span>
+                        <div class="plan-price">
+                            <span class="currency">IDR</span>
+                            <span class="amount">450K</span>
+                        </div>
+                        <span class="plan-period">/ LIFETIME</span>
+                        <p class="plan-desc">Untuk kamu yang serius ingin menjadi trader profitable</p>
+                    </div>
+                    <div class="pricing-body">
+                        <ul class="benefit-list">
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Weekly Signal
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Index Update
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Forex Zone
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Free Request Outlook
+                            </li>
+                            <li>
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                Education E-Book & Discuss
+                            </li>
+                            <li class="benefit-highlight">
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <strong>1-on-1 Mentoring Owner</strong>
+                            </li>
+                            <li class="benefit-highlight">
+                                <span class="benefit-check">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M13.3 4.3L6 11.6L2.7 8.3" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <strong>Zoom Private</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="pricing-footer">
+                        <a href="#" class="btn btn-primary btn-block" id="btn-premium">Pilih Paket Premium</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Exchange Partner Section -->
+    <section class="exchange-partner" id="exchange-partner">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Exchange Partner</span>
+                <h2 class="section-title">Trading di <span class="gradient-text">Exchange Terbaik</span></h2>
+                <p class="section-subtitle">Ruang Trader bermitra dengan exchange global terpercaya untuk memberikan pengalaman trading terbaik bagi member kami.</p>
+            </div>
+
+            <div class="partner-card" id="partner-bingx">
+                <div class="partner-glow"></div>
+                <div class="partner-content">
+                    <div class="partner-logo-wrap">
+                        <img src="assets/images/bingx.svg" alt="BingX Exchange" class="partner-logo">
+                    </div>
+                    <div class="partner-info">
+                        <h3 class="partner-name">BingX Exchange</h3>
+                        <p class="partner-desc">Exchange crypto global dengan 10M+ pengguna di 100+ negara. Nikmati fitur copy trading, spot, futures, dan grid trading dengan fee rendah serta keamanan tingkat tinggi.</p>
+                        <div class="partner-features">
+                            <div class="partner-feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Copy Trading #1</span>
+                            </div>
+                            <div class="partner-feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Fee Rendah</span>
+                            </div>
+                            <div class="partner-feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>Leverage 150x</span>
+                            </div>
+                            <div class="partner-feature-item">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00D084" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <span>700+ Trading Pairs</span>
+                            </div>
+                        </div>
+                        <div class="partner-referral">
+                            <span class="referral-label">Referral Code</span>
+                            <div class="referral-code-box">
+                                <code class="referral-code" id="referral-code">RuangTraderID</code>
+                                <button class="referral-copy-btn" id="copy-referral" aria-label="Copy referral code" title="Copy code">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <a href="https://bingx.pro/id-id/activity/task/3770731953?ref=RuangTraderID" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg partner-cta" id="btn-bingx-register">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path>
+                                <polyline points="10 17 15 12 10 7"></polyline>
+                                <line x1="15" y1="12" x2="3" y2="12"></line>
+                            </svg>
+                            Register ke BingX
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="footer-minimal-inner">
+            <!-- Logo & Brand -->
+            <a href="#home" class="footer-logo-wrap">
+                <svg class="logo-icon" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:40px;height:36px;">
+                    <line x1="8" y1="8" x2="8" y2="32" stroke="#00D084" stroke-width="1.5"/>
+                    <rect x="5" y="14" width="6" height="10" rx="1" fill="#00D084"/>
+                    <line x1="18" y1="2" x2="18" y2="36" stroke="#00D084" stroke-width="1.5"/>
+                    <rect x="14" y="6" width="8" height="20" rx="1" fill="#00D084"/>
+                    <line x1="28" y1="10" x2="28" y2="38" stroke="#38BDF8" stroke-width="1.5"/>
+                    <rect x="25" y="16" width="6" height="14" rx="1" fill="#38BDF8"/>
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-ruang">RUANG</span>
+                    <span class="logo-trader">TRADER</span>
+                </div>
+            </a>
+
+            <!-- Tagline -->
+            <p class="footer-tagline">Komunitas Trading Crypto &amp; Forex #1 di Indonesia</p>
+
+            <!-- Social Pill Buttons -->
+            <div class="footer-social-pills">
+                <a href="https://t.me/RuangTraderx" target="_blank" rel="noopener noreferrer" class="footer-pill" id="pill-telegram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                    Telegram
+                </a>
+                <a href="https://www.instagram.com/ruangtraderz/" target="_blank" rel="noopener noreferrer" class="footer-pill" id="pill-instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    Instagram
+                </a>
+                <a href="https://www.tiktok.com/@ruangtraderz?_r=1&_t=ZS-96mt6SjZMZA" target="_blank" rel="noopener noreferrer" class="footer-pill" id="pill-tiktok">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.88-2.88 2.89 2.89 0 0 1 2.88-2.88c.28 0 .56.04.82.1v-3.5a6.37 6.37 0 0 0-.82-.05A6.34 6.34 0 0 0 3.15 15.2a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.57a8.16 8.16 0 0 0 4.77 1.52V7.64a4.85 4.85 0 0 1-1.01-.95z"/>
+                    </svg>
+                    TikTok
+                </a>
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Copyright -->
+            <p class="footer-copy">&copy; 2026 Ruang Trader. All Rights Reserved.</p>
+            <p class="footer-disclaimer">Disclaimer: Trading crypto &amp; forex mengandung risiko tinggi. Pastikan kamu memahami risiko sebelum trading.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Gabung Sekarang Button -->
+    <a href="https://t.me/RuangTraderx" target="_blank" rel="noopener noreferrer" class="fab-gabung" id="fab-gabung" aria-label="Gabung Sekarang di Telegram">
+        <img src="assets/images/Logo.png" alt="Telegram" class="fab-logo">
+        <span class="fab-text">Gabung Sekarang</span>
+    </a>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
