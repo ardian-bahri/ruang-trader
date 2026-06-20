@@ -122,33 +122,64 @@
         </div>
     </section>
 
-    <!-- Marquee Ticker -->
-    <div class="ticker-bar" id="ticker-bar">
-        <div class="ticker-track">
-            <div class="ticker-content">
-                <span class="ticker-item"><span class="ticker-symbol">BTC/USDT</span> <span class="ticker-green">▲ +2.45%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">ETH/USDT</span> <span class="ticker-green">▲ +1.82%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">SOL/USDT</span> <span class="ticker-red">▼ -0.95%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">XRP/USDT</span> <span class="ticker-green">▲ +3.21%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">BNB/USDT</span> <span class="ticker-green">▲ +0.67%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">ADA/USDT</span> <span class="ticker-red">▼ -1.12%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">DOGE/USDT</span> <span class="ticker-green">▲ +5.43%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">EUR/USD</span> <span class="ticker-green">▲ +0.32%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">GBP/USD</span> <span class="ticker-red">▼ -0.15%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">XAU/USD</span> <span class="ticker-green">▲ +1.05%</span></span>
-                <!-- duplicate for seamless scroll -->
-                <span class="ticker-item"><span class="ticker-symbol">BTC/USDT</span> <span class="ticker-green">▲ +2.45%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">ETH/USDT</span> <span class="ticker-green">▲ +1.82%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">SOL/USDT</span> <span class="ticker-red">▼ -0.95%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">XRP/USDT</span> <span class="ticker-green">▲ +3.21%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">BNB/USDT</span> <span class="ticker-green">▲ +0.67%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">ADA/USDT</span> <span class="ticker-red">▼ -1.12%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">DOGE/USDT</span> <span class="ticker-green">▲ +5.43%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">EUR/USD</span> <span class="ticker-green">▲ +0.32%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">GBP/USD</span> <span class="ticker-red">▼ -0.15%</span></span>
-                <span class="ticker-item"><span class="ticker-symbol">XAU/USD</span> <span class="ticker-green">▲ +1.05%</span></span>
-            </div>
+    <!-- Marquee Ticker (TradingView) -->
+    <div class="ticker-bar" id="ticker-bar" style="padding: 0; display: block; overflow: hidden; height: 46px;">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+            "symbols": [
+                {
+                "proName": "BINANCE:BTCUSDT",
+                "title": "BTC/USDT"
+                },
+                {
+                "proName": "BINANCE:ETHUSDT",
+                "title": "ETH/USDT"
+                },
+                {
+                "proName": "BINANCE:SOLUSDT",
+                "title": "SOL/USDT"
+                },
+                {
+                "proName": "BINANCE:XRPUSDT",
+                "title": "XRP/USDT"
+                },
+                {
+                "proName": "BINANCE:BNBUSDT",
+                "title": "BNB/USDT"
+                },
+                {
+                "proName": "BINANCE:ADAUSDT",
+                "title": "ADA/USDT"
+                },
+                {
+                "proName": "BINANCE:DOGEUSDT",
+                "title": "DOGE/USDT"
+                },
+                {
+                "proName": "OANDA:EURUSD",
+                "title": "EUR/USD"
+                },
+                {
+                "proName": "OANDA:GBPUSD",
+                "title": "GBP/USD"
+                },
+                {
+                "proName": "OANDA:XAUUSD",
+                "title": "XAU/USD"
+                }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": true,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "id"
+            }
+            </script>
         </div>
+        <!-- TradingView Widget END -->
     </div>
 
     <!-- Features Section -->
