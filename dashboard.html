@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Ruang Trader</title>
+    <meta name="description" content="Dashboard member Ruang Trader. Akses modul edukasi, signal trading, dan semua benefit membership kamu.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <svg viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="8" y1="8" x2="8" y2="32" stroke="#00D084" stroke-width="1.5"/>
+                        <rect x="5" y="14" width="6" height="10" rx="1" fill="#00D084"/>
+                        <line x1="18" y1="2" x2="18" y2="36" stroke="#00D084" stroke-width="1.5"/>
+                        <rect x="14" y="6" width="8" height="20" rx="1" fill="#00D084"/>
+                        <line x1="28" y1="10" x2="28" y2="38" stroke="#38BDF8" stroke-width="1.5"/>
+                        <rect x="25" y="16" width="6" height="14" rx="1" fill="#38BDF8"/>
+                    </svg>
+                    <div class="sidebar-logo-text">
+                        <span class="logo-ruang">RUANG</span>
+                        <span class="logo-trader">TRADER</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="sidebar-section-label">Menu</div>
+
+                <button class="sidebar-nav-item active" data-section="home" id="nav-home">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                    Dashboard
+                </button>
+
+                <button class="sidebar-nav-item" data-section="modules" id="nav-modules">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                    Modul Edukasi
+                </button>
+
+                <button class="sidebar-nav-item" data-section="profile" id="nav-profile">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    Profil
+                </button>
+
+                <div class="sidebar-section-label">Links</div>
+
+                <a href="https://t.me/Hik4ru" target="_blank" rel="noopener noreferrer" class="sidebar-nav-item">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                    Hubungi Admin
+                </a>
+
+                <a href="index.html" class="sidebar-nav-item">
+                    <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Landing Page
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-avatar" id="sidebar-avatar">U</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name" id="sidebar-user-name">Member</div>
+                        <div class="sidebar-user-email" id="sidebar-user-email">member@email.com</div>
+                    </div>
+                </div>
+                <button class="btn-logout" id="btn-logout">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                        <polyline points="16 17 21 12 16 7"></polyline>
+                        <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    Logout
+                </button>
+            </div>
+        </aside>
+
+        <!-- Mobile Sidebar Overlay -->
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Topbar -->
+            <header class="topbar">
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button class="hamburger-dash" id="hamburger-dash" aria-label="Toggle sidebar">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <h2 class="topbar-title" id="topbar-title">Dashboard</h2>
+                </div>
+                <div class="topbar-right">
+                    <div class="topbar-status inactive" id="topbar-status">
+                        <span class="topbar-status-dot"></span> Belum Aktif
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="content-area">
+
+                <!-- ═══════ HOME SECTION ═══════ -->
+                <section class="dashboard-section active" id="section-home">
+
+                    <!-- Paid Content -->
+                    <div class="paid-only">
+                        <div class="welcome-card">
+                            <div class="welcome-glow"></div>
+                            <h1 class="welcome-title">Selamat datang, <span class="gradient-text" id="welcome-name">Member</span>! 👋</h1>
+                            <p class="welcome-subtitle">Akses semua modul edukasi dan mulai upgrade skill trading kamu.</p>
+                            <div class="welcome-stats">
+                                <div class="welcome-stat">
+                                    <div class="welcome-stat-label">Paket</div>
+                                    <div class="welcome-stat-value blue" id="stat-package">—</div>
+                                </div>
+                                <div class="welcome-stat">
+                                    <div class="welcome-stat-label">Status</div>
+                                    <div class="welcome-stat-value green" id="stat-status">Aktif</div>
+                                </div>
+                                <div class="welcome-stat">
+                                    <div class="welcome-stat-label">Total Modul</div>
+                                    <div class="welcome-stat-value">6</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="quick-links">
+                            <div class="quick-link-card" onclick="document.getElementById('nav-modules').click()">
+                                <div class="quick-link-icon green">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quick-link-title">Modul Edukasi</div>
+                                    <div class="quick-link-desc">Akses semua materi belajar</div>
+                                </div>
+                            </div>
+                            <div class="quick-link-card" onclick="window.open('https://t.me/Hik4ru', '_blank')">
+                                <div class="quick-link-icon blue">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quick-link-title">Hubungi Admin</div>
+                                    <div class="quick-link-desc">Konsultasi via Telegram</div>
+                                </div>
+                            </div>
+                            <div class="quick-link-card" onclick="document.getElementById('nav-profile').click()">
+                                <div class="quick-link-icon orange">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="quick-link-title">Profil Saya</div>
+                                    <div class="quick-link-desc">Lihat info akun kamu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Unpaid Content -->
+                    <div class="unpaid-only">
+                        <div class="welcome-card">
+                            <div class="welcome-glow"></div>
+                            <h1 class="welcome-title">Hai, <span class="gradient-text" id="welcome-name-unpaid">Member</span>! 👋</h1>
+                            <p class="welcome-subtitle">Kamu sudah berhasil login. Namun, membership kamu belum aktif.</p>
+                        </div>
+                        <div class="inactive-overlay">
+                            <div class="inactive-icon">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h2 class="inactive-title">Membership Belum Aktif</h2>
+                            <p class="inactive-desc">Untuk mengakses semua modul edukasi, signal trading, dan benefit lainnya, silakan pilih paket dan selesaikan pembayaran terlebih dahulu.</p>
+                            <a href="index.html#pricing" class="btn-choose-package">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <line x1="12" y1="8" x2="12" y2="16"></line>
+                                    <line x1="8" y1="12" x2="16" y2="12"></line>
+                                </svg>
+                                Pilih Paket Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ MODUL SECTION ═══════ -->
+                <section class="dashboard-section" id="section-modules">
+                    <div class="paid-only">
+                        <div class="modul-header">
+                            <div>
+                                <h2 class="modul-title">📚 Modul Edukasi</h2>
+                                <div class="modul-count" id="modul-count">6 modul tersedia</div>
+                            </div>
+                            <div class="modul-search">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                                <input type="text" placeholder="Cari modul..." id="modul-search">
+                            </div>
+                        </div>
+                        <div class="modul-grid" id="modul-grid"></div>
+                    </div>
+                    <div class="unpaid-only">
+                        <div class="inactive-overlay">
+                            <div class="inactive-icon">
+                                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#F59E0B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <h2 class="inactive-title">Akses Modul Terkunci</h2>
+                            <p class="inactive-desc">Modul edukasi hanya tersedia untuk member berbayar. Silakan pilih paket terlebih dahulu.</p>
+                            <a href="index.html#pricing" class="btn-choose-package">
+                                Pilih Paket Sekarang
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ═══════ VIEWER SECTION ═══════ -->
+                <section class="viewer-section" id="section-viewer">
+                    <div class="viewer-header">
+                        <button class="viewer-back" onclick="backToModules()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="19" y1="12" x2="5" y2="12"></line>
+                                <polyline points="12 19 5 12 12 5"></polyline>
+                            </svg>
+                            Kembali
+                        </button>
+                        <div class="viewer-title" id="viewer-title">Modul</div>
+                    </div>
+                    <div class="viewer-container" id="viewer-container">
+                        <!-- PDF/PPT will be embedded here -->
+                    </div>
+                </section>
+
+                <!-- ═══════ PROFILE SECTION ═══════ -->
+                <section class="dashboard-section" id="section-profile">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar" id="profile-avatar">U</div>
+                            <div>
+                                <div class="profile-name" id="profile-name">Member</div>
+                                <div class="profile-email" id="profile-email">member@email.com</div>
+                            </div>
+                        </div>
+
+                        <div class="profile-detail-group">
+                            <div class="profile-detail-label">Nama Lengkap</div>
+                            <div class="profile-detail-value" id="profile-name-value">Member</div>
+                        </div>
+
+                        <div class="profile-detail-group">
+                            <div class="profile-detail-label">Email</div>
+                            <div class="profile-detail-value" id="profile-email-value">member@email.com</div>
+                        </div>
+
+                        <div class="profile-detail-group">
+                            <div class="profile-detail-label">Paket Membership</div>
+                            <div class="profile-detail-value" id="profile-package-value">—</div>
+                        </div>
+
+                        <div class="profile-detail-group">
+                            <div class="profile-detail-label">Status</div>
+                            <div>
+                                <span class="profile-badge inactive" id="profile-status-badge">● Belum Aktif</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

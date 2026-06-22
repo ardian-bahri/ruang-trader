@@ -121,8 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     submitBtn.classList.remove('loading');
                     showToast('Login berhasil! Mengalihkan...', 'success');
 
+                    const registered = JSON.parse(localStorage.getItem('registered_users') || '{}');
+                    const userName = registered[email] ? registered[email].name : email.split('@')[0];
+                    localStorage.setItem('logged_in_user', JSON.stringify({ email: email, name: userName }));
+
                     setTimeout(() => {
-                        window.location.href = 'index.html';
+                        window.location.href = 'dashboard.html';
                     }, 1500);
                 }, 1800);
             }
@@ -253,6 +257,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.classList.add('loading');
 
                 setTimeout(() => {
+                    const registered = JSON.parse(localStorage.getItem('registered_users') || '{}');
+                    registered[email] = { name: name, email: email };
+                    localStorage.setItem('registered_users', JSON.stringify(registered));
+
                     submitBtn.classList.remove('loading');
                     showToast('Registrasi berhasil! Silakan login.', 'success');
 

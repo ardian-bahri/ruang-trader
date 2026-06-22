@@ -4,6 +4,43 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // ─── Dynamic Navbar Auth ────────────────────────────
+    const loggedInUser = JSON.parse(localStorage.getItem('logged_in_user'));
+    const navAuthButtons = document.getElementById('nav-auth-buttons');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (loggedInUser && navAuthButtons) {
+        navAuthButtons.innerHTML = `
+            <a href="dashboard.html" class="btn btn-primary nav-btn-signup" id="nav-dashboard-btn">Dashboard</a>
+        `;
+    }
+    if (loggedInUser && mobileMenu) {
+        const mobileLinks = mobileMenu.querySelector('.mobile-nav-links');
+        if (mobileLinks) {
+            // Replace login/signup with dashboard link
+            const loginLink = mobileLinks.querySelector('a[href="login.html"]');
+            const signupLink = mobileLinks.querySelector('a[href="register.html"]');
+            if (loginLink) loginLink.parentElement.remove();
+            if (signupLink) {
+                signupLink.href = 'dashboard.html';
+                signupLink.textContent = 'Dashboard';
+                signupLink.className = 'btn btn-primary';
+            }
+        }
+    }
+
+    // ─── Payment Success Handler ────────────────────────
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('payment') === 'success' && loggedInUser) {
+        loggedInUser.payment_status = 'paid';
+        if (!loggedInUser.package_type) loggedInUser.package_type = 'basic';
+        localStorage.setItem('logged_in_user', JSON.stringify(loggedInUser));
+        window.history.replaceState({}, document.title, 'index.html');
+        // Redirect to dashboard
+        window.location.href = 'dashboard.html?payment=success';
+        return;
+    }
+
     // ─── Navbar Scroll Effect ───────────────────────────
     const navbar = document.getElementById('navbar');
 
@@ -19,7 +56,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── Mobile Menu ────────────────────────────────────
     const hamburger = document.getElementById('hamburger');
-    const mobileMenu = document.getElementById('mobileMenu');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
@@ -312,6 +348,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── Xendit Payment Gateway Integration ─────────────
     const handleCheckout = async (packageType, button) => {
+        const user = JSON.parse(localStorage.getItem('logged_in_user'));
+        if (!user) {
+            const modal = document.getElementById('authModal');
+            if (modal) {
+                modal.classList.add('active');
+            } else {
+                alert('Silakan login atau register terlebih dahulu untuk melanjutkan pembayaran.');
+                window.location.href = 'login.html';
+            }
+            return;
+        }
+
         const originalText = button.textContent;
         button.textContent = 'Memproses...';
         button.style.pointerEvents = 'none';
@@ -323,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 headers: {
                     'Content-Type': 'application/json'
                 },
-                body: JSON.stringify({ packageType })
+                body: JSON.stringify({ packageType: packageType, name: user.name, email: user.email })
             });
 
             const data = await response.json();
@@ -352,6 +400,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnBasic) {
         btnBasic.addEventListener('click', (e) => {
             e.preventDefault();
+            // Save package type to user before checkout
+            const u = JSON.parse(localStorage.getItem('logged_in_user'));
+            if (u) { u.package_type = 'basic'; localStorage.setItem('logged_in_user', JSON.stringify(u)); }
             handleCheckout('basic', btnBasic);
         });
     }
@@ -359,6 +410,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btnPremium) {
         btnPremium.addEventListener('click', (e) => {
             e.preventDefault();
+            const u = JSON.parse(localStorage.getItem('logged_in_user'));
+            if (u) { u.package_type = 'vip'; localStorage.setItem('logged_in_user', JSON.stringify(u)); }
             handleCheckout('vip', btnPremium);
         });
     }
@@ -382,5 +435,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+
+    // ─── Auth Modal Handling ────────────────────────────
+    const authModal = document.getElementById('authModal');
+    const authModalClose = document.getElementById('authModalClose');
+    if (authModal && authModalClose) {
+        authModalClose.addEventListener('click', () => {
+            authModal.classList.remove('active');
+        });
+        authModal.addEventListener('click', (e) => {
+            if (e.target === authModal) {
+                authModal.classList.remove('active');
+            }
+        });
+    }
 
 });

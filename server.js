@@ -17,10 +17,15 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+// Serve dashboard.html
+app.get('/dashboard.html', (req, res) => {
+    res.sendFile(path.join(__dirname, 'dashboard.html'));
+});
+
 // Endpoint to create Xendit Invoice
 app.post('/api/checkout', async (req, res) => {
     try {
-        const { packageType, email } = req.body;
+        const { packageType, email, name } = req.body;
         
         let amount = 0;
         let description = '';
@@ -49,6 +54,11 @@ app.post('/api/checkout', async (req, res) => {
                 amount: amount,
                 description: description,
                 payer_email: email || 'member@ruangtrader.com',
+                customer: {
+                    given_names: name || 'Member',
+                    email: email || 'member@ruangtrader.com'
+                },
+                payment_methods: ["BCA", "DANA", "GOPAY"],
                 success_redirect_url: 'http://localhost:3000/index.html?payment=success',
                 failure_redirect_url: 'http://localhost:3000/index.html?payment=failed'
             },
