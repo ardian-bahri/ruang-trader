@@ -1933,8 +1933,25 @@ img {
         padding: 60px 0;
     }
     
+    .about-float-card {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+    
     .about-card-stack {
-        min-height: 340px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        min-height: auto;
+    }
+    
+    .about-chart-box {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
     }
     
     .how-it-works {
@@ -1970,6 +1987,15 @@ img {
     .footer {
         padding: 48px 0 32px;
     }
+    
+    .footer-logo-wrap {
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .footer-logo-wrap .logo-text {
+        align-items: center;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1981,27 +2007,6 @@ img {
     .stat-divider {
         width: 48px;
         height: 1px;
-    }
-    
-    .about-float-card {
-        position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-    }
-    
-    .about-card-stack {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        min-height: auto;
-    }
-    
-    .about-chart-box {
-        position: relative;
-        left: auto;
-        right: auto;
-        bottom: auto;
     }
     
     .pricing-card {
